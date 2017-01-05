@@ -6,8 +6,8 @@ auth_token  = "############"
 client = TwilioRestClient(account_sid, auth_token)
  
 message = client.messages.create(body="Hello Kitson - This is Pi",
-    to="+16045068519",    # Replace with your phone number
-    from_="+16042106375") # Replace with your Twilio number
+    to="+18888888888",    # Replace with your phone number
+    from_="+19999999999") # Replace with your Twilio number
 print message.sid"""
 
 from flask import Flask, request, redirect
@@ -19,9 +19,9 @@ app = Flask(__name__)
 
 # Try adding your own number to this list!
 callers = {
-    "+16045068519": "Serious",
-    "+16043767388": "Bowner",
-    "+16042501029": "Jittle",
+    "+16045068519": "John",
+    "+16043767388": "Billy",
+    "+16042501029": "Bob",
 }
  
 @app.route("/", methods=['GET', 'POST'])
