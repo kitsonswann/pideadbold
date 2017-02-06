@@ -55,7 +55,7 @@ def hello_monkey():
         GPIO.cleanup()
         message = callers[from_number] + ", the door is now locked!"
     else:
-        message = "Access Denied Bitch!"
+        message = "Access Denied"
 
     resp = twilio.twiml.Response()
     resp.message(message)
